@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # About this App
-This is an assignment for my studies for the Web Technologies, in it entails a front end web based application built using react and scss for styling. Where i had to create a portfolio to show case some of my work and means to contact me, this is a single page application. The packages i have included in this application are the standalone react app packages and have also added sass and emailjs-com. The sass package allows me to use scss styling and the emailjs-com package has allowed me to create a contact form where users can message me a question, their name and email and a subject matter with the message. 
+This is an assignment for my studies for Web Technologies, in it entails a front end web based application built using react and scss for styling. Where i had to create a portfolio to show case some of my work and means to contact me, this is a single page application. The packages i have included in this application are the standalone react app packages and have also added sass and emailjs-com. The sass package allows me to use scss styling and the emailjs-com package has allowed me to create a contact form where users can message me a question, their name and email and a subject matter with the message. 
 
 ## Available Scripts
 
