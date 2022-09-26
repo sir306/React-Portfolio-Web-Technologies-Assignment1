@@ -1,0 +1,238 @@
+@import "./_mixin.scss"; // import mixin style
+@import "./_variables.scss"; // import variables
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 4%;
+  border: solid 5px $borderColor;
+  border-radius: 10px;
+  background: $secondaryColor;
+  text-align: center;
+  align-items: center;
+  @include fontStyleGlobal;
+  form {
+    margin: 1%;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+  }
+  input {
+    padding: 1%;
+    margin: 1%;
+    width: 100%;
+    background-color: $navBackColor;
+    border: solid 2px $borderColor;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 0.1rem;
+    font-size: smaller;
+  }
+  textarea {
+    padding: 1%;
+    margin: 1%;
+    width: 100%;
+    background-color: $navBackColor;
+    border: solid 2px $borderColor;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 0.1rem;
+    font-size: x-large;
+  }
+  button {
+    padding: 1%;
+    margin: 1%;
+    max-width: 50%;
+    width: 100%;
+    background-color: $navBackColor;
+    border: solid 2px $borderColor;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 0.1rem;
+    font-size: medium;
+    font-variant: small-caps;
+    &:hover {
+      background-color: $secondaryBorderColor;
+      cursor: pointer;
+    }
+  }
+}
+// keyframe flash is used to alternate between colors to grab user attention
+@keyframes flash {
+  0% {
+    border: solid 3px red;
+    background-color: $secondaryBorderColor;
+  }
+  15% {
+    border: solid 3px black;
+    background-color: $borderColor;
+  }
+  25% {
+    border: solid 3px red;
+    background-color: $secondaryBorderColor;
+  }
+  35% {
+    border: solid 3px black;
+    background-color: $borderColor;
+  }
+  45% {
+    border: solid 3px red;
+    background-color: $secondaryBorderColor;
+  }
+  55% {
+    border: solid 3px black;
+    background-color: $borderColor;
+  }
+  65% {
+    border: solid 3px red;
+    background-color: $secondaryBorderColor;
+  }
+  75% {
+    border: solid 3px black;
+    background-color: $borderColor;
+  }
+  85% {
+    border: solid 3px red;
+    background-color: $secondaryBorderColor;
+  }
+  95% {
+    border: solid 3px black;
+    background-color: $borderColor;
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: bgFade 1.2s linear;
+}
+// form error
+.formError {
+  opacity: 1;
+  margin: auto;
+  max-width: 100%;
+  position: relative;
+  display: inline-block;
+  color: black;
+  border: solid 4px black;
+  border-radius: 3px;
+  background: $borderColor;
+  animation: flash 1.2s;
+  text-align: center;
+  top: 30%;
+  button {
+    border: solid 2px black;
+    border-radius: 5px;
+    background: $navBackColor;
+    color: black;
+  }
+  button:hover {
+    color: white;
+    background: $hoverBGColor;
+    border: solid 2px white !important;
+  }
+}
+// rotating for loading image
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.sendingMessage {
+  opacity: 1;
+  margin: auto;
+  max-width: 100%;
+  position: relative;
+  display: inline-block;
+  color: black;
+  border: solid 3px black;
+  border-radius: 3px;
+  background: $borderColor;
+  text-align: center;
+  top: 30%;
+  // this div is for the image
+  div.loading {
+    animation: rotating 2s linear infinite;
+    content: url("../../public/logo192.png"); // using local react image
+    margin: auto;
+    margin-bottom: 4%;
+    max-width: 25%;
+  }
+}
+@media (max-width: $smallScreen) {
+  .contactForm {
+    margin-top: 2%;
+    form {
+      width: 90%;
+      align-items: center;
+      justify-content: center;
+    }
+    input {
+      width: 100%;
+      background-color: $navBackColor;
+      border: solid 2px $borderColor;
+      border-radius: 5px;
+    }
+    textarea {
+      width: 100%;
+      background-color: $navBackColor;
+      border: solid 2px $borderColor;
+      border-radius: 5px;
+      letter-spacing: 0.1rem;
+      font-size: small;
+    }
+    button {
+      width: 50%;
+      background-color: $navBackColor;
+      border: solid 2px $borderColor;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width: $mobileScreen) {
+  .contactForm {
+    form {
+      width: 90%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input {
+      max-width: 100%;
+      width: 90%;
+      margin-bottom: 2%;
+      background-color: $navBackColor;
+      border: solid 2px $borderColor;
+      border-radius: 5px;
+      font-size: smaller;
+    }
+    textarea {
+      margin-bottom: 2%;
+      max-width: 100%;
+      width: 90%;
+      background-color: $navBackColor;
+      border: solid 2px $borderColor;
+      border-radius: 5px;
+      font-size: medium;
+    }
+    button {
+      margin-bottom: 2%;
+      width: 50%;
+      background-color: $navBackColor;
+      border: solid 2px $borderColor;
+      border-radius: 5px;
+    }
+  }
+}

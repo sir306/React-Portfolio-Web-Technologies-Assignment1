@@ -1,0 +1,52 @@
+@import "./_variables.scss"; // import variables
+@import "./_mixin.scss"; // import mixin style
+
+// body style
+body {
+  opacity: 0;
+  margin: 0;
+  background-color: $mainColor;
+}
+// class to be added via script
+.animationPlay {
+  animation: fadeIn 1.2s ease-in-out;
+  opacity: 1;
+}
+// page style
+.page {
+  margin: 0;
+  padding-top: 1%;
+  background-color: $mainColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+// tablet breakpoint variations
+@media (max-width: $smallScreen) {
+  .page {
+    padding-top: 2%;
+  }
+}
+// mobile breakpoint variation
+@media (max-width: $mobileScreen) {
+  .page {
+    padding-top: 8%;
+  }
+}
+section {
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  h1 {
+    @include fontStyleGlobal;
+    margin: 5%;
+    margin-top: 4%;
+    margin-bottom: 0%;
+  }
+}
+section#Work{
+  h1{
+    margin-top: 0%;
+  }
+}

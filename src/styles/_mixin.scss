@@ -1,0 +1,28 @@
+// Mixin sheet
+// Text
+@mixin fontStyleGlobal {
+  font-family: Georgia;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.03rem;
+}
+
+// fade in effect
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// fade in effect 2 used for background overlays
+@keyframes bgFade {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

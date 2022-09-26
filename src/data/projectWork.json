@@ -1,0 +1,26 @@
+[
+  {
+    "title": "First Person Shooter Unreal Engine",
+    "image": "fps.png",
+    "imageAlt": "This is a screenshot of the first person shooter project",
+    "gitLink": "https://github.com/sir306/ShooterProject",
+    "gitHubLinkTitle": "View FPS Repo",
+    "description": "This is my second Unreal Engine project, in this project you can see that it is comprised of C++ and UE Blueprints, this game is a single level prototype with multiple weapons and enemies. The enemies have varying speed, health, and damage amount to give the prototype some variety and depth."
+  },
+  {
+    "title": "Sunday Markets",
+    "image": "sundayMarkets.png",
+    "imageAlt": "This is a screenshot of the Sunday Market project",
+    "gitLink": "https://github.com/sunday-market/sunday-market-app",
+    "gitHubLinkTitle": "View Sunday Market Repo",
+    "description": "This is my Level 6 Diploma capstone project, I worked in a team of two to create a fullstack application using the MERN stack and SocketIO. The main components that I worked on was the shopping cart and the instant realtime message chat system were I used SocketIO to achieve this."
+  },
+  {
+    "title": "Speedy Demon Racer",
+    "image": "speedyDemon.png",
+    "imageAlt": "This is a screenshot of the Speedy Demon Racer project",
+    "gitLink": "https://github.com/sir306/IT6034_Project_SpeedyDemonRacerGame",
+    "gitHubLinkTitle": "View Speedy Demon Racer Repo",
+    "description": "This project was a school project for the game module, in this project the game engine used was GODOT, where the game is scripted using GD script. The game features two playable levels and a tutorial level, the objective of game is to beat the clock and race around the track avoiding explosive dangers and negative shield power ups, which cause the shield around the race track to fail and start to shrink allowing the lava in."
+  }
+]

@@ -1,0 +1,67 @@
+@import "./_variables.scss"; // import variables
+@import "./_mixin.scss"; // import mixin style
+//navbar style
+
+nav {
+  position: fixed;
+  background-color: $navBackColor;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  width: 100%;
+  ul {
+    margin: 0%;
+    padding: 0;
+    padding-right: 5%;
+    div {
+      transform: skew(-20deg);
+      :hover {
+        background-color: $secondaryBorderColor;
+        cursor: pointer;
+      }
+      li {
+        white-space: nowrap;
+        height: 90%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        padding-top: 0.8%;
+        padding-bottom: 0.8%;
+        float: right;
+        list-style-type: none;
+        background-color: $secondaryColor;
+        border: solid 2px $borderColor;
+        border-radius: 5px;
+        div {
+          transform: skew(20deg);
+          p {
+            @include fontStyleGlobal;
+            font-weight: 500;
+            font-size: 1.2em;
+            text-decoration: none;
+            margin: 0%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $smallScreen) {
+}
+
+@media (max-width: $mobileScreen) {
+  nav {
+    position: fixed;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        list-style-type: none;
+      }
+    }
+  }
+}

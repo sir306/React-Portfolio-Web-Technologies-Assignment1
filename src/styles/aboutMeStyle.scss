@@ -1,0 +1,98 @@
+@import "./_mixin.scss"; // import mixin style
+@import "./_variables.scss"; // import variables
+
+#AboutMe {
+  margin: 5%;
+  margin-top: 1%;
+  padding: 1%;
+  background-color: #2f2fa2;
+  border-radius: 5px;
+  border: solid 2px #f64c72;
+  @include fontStyleGlobal;
+}
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #242582;
+  cursor: pointer;
+  padding: 0.5% 1%;
+  width: 100%;
+  text-align: left;
+  border: solid 2px #f64c72;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px $secondaryBorderColor;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+  background-color: $hoverBGColor;
+  border: solid 2px $borderColor;
+  box-shadow: 1px 2.5px 2.5px $borderColor;
+}
+
+// /* Style the collapsible content*/
+.colapseContent {
+  background-color: #2f2fa2;
+}
+.title {
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-bottom: 0;
+  margin-top: 0.5%;
+  font-family: Copperplate;
+  font-size: 1.4em;
+  font-weight: 800;
+  color: white;
+}
+.smallTitle {
+  margin-bottom: 0;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-top: 0.5%;
+  font-family: Copperplate;
+  font-size: 1.2em;
+  font-weight: 800;
+  font-style: oblique;
+  color: white;
+}
+p {
+  padding-left: 1%;
+  padding-right: 1%;
+  font-weight: 500;
+}
+@media (max-width: $smallScreen) {
+  #AboutMe {
+    margin-top: 2%;
+  }
+  .title {
+    margin-top: 1%;
+    font-size: 1em;
+    font-weight: 600;
+  }
+  .smallTitle {
+    margin-top: 1%;
+    font-size: 1em;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: $mobileScreen) {
+  #AboutMe {
+    padding-bottom: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .title {
+    margin-top: 1%;
+    font-size: 1em;
+    font-weight: 500;
+  }
+  .smallTitle {
+    margin-top: 1%;
+    font-size: 1em;
+    font-weight: 500;
+  }
+  p {
+    font-weight: 400;
+  }
+}
